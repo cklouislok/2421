@@ -91,7 +91,7 @@ img {
 
 /*Setting background color of header section, to distinguish from the main content of the website*/
 .bg-img {
-	background-image: url("images/cover.jpg");
+	background-image: url("images/Cover.jpg");
 	min-height: 500px;
 	background-position: center;
 	background-repeat: no-repeat;
