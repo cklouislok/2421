@@ -5,6 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us</title>
 <link rel="stylesheet" href="mystyle.css">
+
+<style>
+/* source of button styling: https://getcssscan.com/css-buttons-examples */
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-container {
+	display: flex;
+	gap: 170px;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+</style>
+
+
+
 </head>
 
 <body>
@@ -39,52 +101,58 @@
     </div>
 </header>
 
-<
+
 <div class = "aboutustext">  <!--Follow class "aboutustext" css-->
-	<h1>Welcome to CEnGISolutions</h1>  <!--Title-->
+	<h1>Tree Inventory Map of the City of Peterborough</h1>  <!--Title-->
 
-	<p>At CEnGISolutions, we are the forefront of Geographic Information Systems (GIS) consulting, driven by a passion for leveraging spatial data to unlock insights and solutions. Established in 2008, we've been dedicated to revolutionizing how businesses harness the power of location intelligence for optimal decision-making and innovation.</p>
-
-	<p>Welcome to CEnGISolutions, where our journey began with a passion for harnessing the power of geospatial intelligence. Founded on the belief that location-based insights can drive transformative change, our agency is dedicated to providing cutting-edge GIS solutions. With a team of skilled professionals and a commitment to innovation,
-	we strive to unlock the full potential of spatial data for our clients. Whether it's optimizing workflows, enhancing decision-making processes, or solving complex spatial challenges, we're here to map out success together. 
-	Join us on this GIS adventure, where precision meets possibility, and let's navigate the future spatially.
+	<p>
+		This product is an interactive web map of trees in the City of Peterborough designed for public use.
 	</p>
-	<h2>Our Story</h2>  <!--Subtitle-->
-	<p>Our journey started with a vision to revolutionize the GIS landscape. Founded by Shawn Morgan, a visionary in the field, our company emerged to address the growing need for comprehensive GIS solutions. Since our inception, we've achieved numerous milestones, from pioneering advancements in remote sensing technology to delivering innovative spatial analysis techniques.</p>
+
+	<p>
+		The product is configured with major reference to ArcGIS
+		Maps SDK for JavaScript Version 4.29, and also some reference to external sources such as sample
+		codes for Cascading Style Sheets (CSS).
+	</p>
+	<h2>Main functions</h2>  <!--Subtitle-->
+	<p>Check out our product, our ArcGIS StoryMaps or the descriptions below for a tour of its features!</p>
+	<div class="button-container">
+		<button class="button-64" role="button" onclick=" window.open('ptbo_treeinventory.html','_blank')">
+			<span class="text">The Product</span></button>
+		<button class="button-64" role="button" onclick=" window.open('https://arcg.is/1f9a091','_blank')">
+			<span class="text">ArcGIS StoryMaps</span></button>
+	</div>
 </div>
+
 
 <!--Create a div containing 2 columns of equal width-->
 <div class="gridlayout">
 	<div class="gridelement sectionparagraph">
 		<div class="imgdes">
-			<h2 class="leftalign">Year 1 - Inception and Breakthrough</h2>
+			<h2 class="leftalign">Feature 1: Popup Information for Individual Trees</h2>
 			<p>
-				CEnGISolutions was founded by GIS enthusiasts Shawn Morgan, Marikka Williams, 
-				Frank Kenny, Karen Whillans, and Kendra Chalmers. In its first year, it secured 
-				a breakthrough project with a government agency, providing comprehensive 
-				GIS solutions for urban planning, setting the stage for success.  
+				Zoom in and click on any tree to access information like status, common name, and location!
 			</p>
 		</div>		
 	</div>
 	<div class="gridelement">
 		<div class="imgblock">
-			<img class="imgProject" src="images/AboutUsYear1.png" alt="Business relationship photo">
+			<img class="imgProject" src="images/d3popup.gif" alt="Demonstration of Tree Popup">
 		</div>
 	</div>
 </div>
 <div class="gridlayout">
 	<div class="gridelement">
 		<div class="imgblock">
-			<img class="imgProject" src="images/AboutUsYear7.jpg" alt="network photo">
+			<img class="imgProject" src="images/d3sql.gif" alt="Demonstration of Tree Filter">
 		</div>
 	</div>
 	<div class="gridelement sectionparagraph">
 		<div class="imgdes">
-			<h2 class="leftalign">Year 7 - Technological Innovation</h2>
+			<h2 class="leftalign">Feature 2: Tree Status Selector</h2>
 			<p>
-				After years of research and development, CEnGISolutions pioneered a groundbreaking 
-				AI-driven GIS platform, transforming how spatial data was analyzed and utilized. 
-				This innovation propels the company to the forefront of the industry.
+				Users can select a particular status of trees to display in the map.
+				This function is constructed by Structured Query Language (SQL). 
 			</p>
 		</div>		
 	</div>
@@ -92,125 +160,46 @@
 <div class="gridlayout">
 	<div class="gridelement sectionparagraph">
 		<div class="imgdes">
-			<h2 class="leftalign">Year 14 - Merger and Global Expansion</h2>
+			<h2 class="leftalign">Feature 3: Tree Zone Statistics</h2>
 			<p>
-				2022 marked a transformative year as CEnGISolutions merged with a tech conglomerate, 
-				broadening its capabilities and global footprint. It expanded the services into emerging 
-				markets, solidifying its position as a leading global GIS solutions provider.			
+				Zoom out and click on any tree zone to look at five most common species of that zone.
+				The numbers change dynamically based on the tree status selection.			
 			</p>
 		</div>		
 	</div>
 	<div class="gridelement">
 		<div class="imgblock">
-			<img class="imgProject" src="images/AboutUsYear14.png" alt="globe photo">
+			<img class="imgProject" src="images/treezone.gif" alt="Demonstration of Tree Zone Statistics">
 		</div>
 	</div>
 </div>
 
 <div class = "aboutustext">  <!--Follow class "aboutustext" css-->
-	<h2>Our Mission</h2>  <!--Subtitle-->
+	<h2>Source</h2>  <!--Subtitle-->
 	<p>
-		At CEnGISolutions, our mission is clear: to empower businesses with comprehensive GIS solutions. We aim to bridge the gap 
-		between spatial data and actionable insights, enabling our clients to make informed decisions that drive success and growth.
+		Tree Inventory and Tree Zone data obtained from the City of Peterborough.
 	</p>
 
-	<h2>What Sets Us Apart</h2>  <!--Subtitle-->
+	<h2>Other Design Elements</h2>  <!--Subtitle-->
 	<p>
-		At CEnGISolutions, our expertise lies in our holistic approach to GIS consulting. We merge cutting-edge technology, in-depth 
-		industry knowledge, and a client-centric focus to deliver tailored solutions. Our team of GIS experts is committed to excellence, 
-		ensuring that every project surpasses expectations.
+		Responsive webpage design, customized loading screen, how-to-use modal button and useful widgets.
 	</p>
 
-	<h2>Our Commitment</h2>
+	<h2>Limitation</h2>
 	<p>
-		We uphold core values of integrity, innovation, and client satisfaction. Your success is our priority. We collaborate closely 
-		with clients, understanding their unique needs and delivering solutions that add significant value to their operations.
+		Due to data security and privacy concerns, the potential planting area data layer created in 
+		this project cannot	be incorporated into this product.
 	</p>
 
-	<h2>Sustainability</h2>
+	<h2>Recommendation</h2>
 	<p>
-		At CEnGISolutions, our commitment to sustainability extends beyond providing expert guidance 
-		it's an integral part of our ethos. We understand the profound impact businesses can have on the environment and society. 
-		That's why we integrate sustainable practices to every facet of our consulting services. From fostering environmentally 
-		conscious strategies to promoting ethical business practices, we empower our clients to navigate the complexities of 
-		sustainable business growth. Partner with us to not only achieve your business objectives but also to contribute meaningfully 
-		to a more sustainable and responsible future.
+		If time allows, the popup information for indiviudal trees can include links 
+		to more information, photos, or other useful information for the public.
 	</p>
 </div>
-<!--*** End Owner: Qianhui Hong *** -->
 
-<!-- -----------------
-- Owner : Qianhui Hong
-- Date  : Dec 4 (v1)
-- From  : 
-------------------- -->
-<h1>Honorable Founders of CEnGISolutions</h1>
 
-<!--Create a div containing 5 columns of equal width as grid-->
-<div class="gridlayout gridlayout5Columns">  <!--Define a class "gridlayout gridlayout5Columns" for 5 columns in equal width with the same style-->
-	<div class="gridelement">  <!--First column-->
-		<div class="imgblock">  <!--Define a class "imgblock" for images css-->
-			<img src="images/John.jpg" alt="John">
-		</div>
-		<div class="imgdes">  <!--Define a class "imgblock" to place descriptions-->
-			<h3>Chung</h3>
-			<h3>Chief Operations Officer</h3>
-		</div>
-	</div>
-	<div class="gridelement">  <!--Second column-->
-		<div class="imgblock">
-			<img src="images/Hong.jpg" alt="Hong">
-		</div>
-		<div class="imgdes">
-			<h3>Hong</h3> 
-			<h3>Chief Strategy Officer</h3>
-		</div>		
-	</div>
-	<div class="gridelement">  <!--Thrid column-->
-		<div class="imgblock">
-			<img src="images/Louis.jpg" alt="Louis">
-		</div>
-		<div class="imgdes">
-			<h3>Lok</h3>
-			<h3>Chief Technology Officer</h3>
-		</div>		
-	</div>
-	<div class="gridelement">  <!--Fourth column-->
-		<div class="imgblock">
-			<img src="images/luk.jpg" alt="Luk">
-		</div>
-		<div class="imgdes">
-			<h3>Luk</h3>
-			<h3>Chief Financial Officer</h3>
-		</div>		
-	</div>
-	<div class="gridelement">  <!--Fifth column-->
-		<div class="imgblock">
-			<img src="images/Marcuspic.jpg" alt="Marcus">
-		</div>
-		<div class="imgdes">
-			<h3>Tam </h3>
-			<h3>Chief Marketing Officer</h3>
-		</div>		
-	</div>
-</div>
 
-<div class = "aboutustext">  <!--Follow class "aboutustext" css-->
-<h2>Join Us</h2>  <!--Subtitle-->
-<p>
-	Partner with us to embark on a journey of unlocking the true potential of spatial data. Whether you're seeking GIS 
-	solutions, exploring career opportunities, or looking to collaborate, we invite you to experience the CEnGISolutions difference.
-</p>
-<h3>Thank you for choosing CEnGISolutions. Let's map a better future together!</h3>
-</div>
-<!--*** End Owner: Qianhui Hong *** -->
-
-<!--Create a standardized footer to be used across pages -->
-<!-- -----------------
-- Owner : King Hei Tam 
-- Date  : Dec 1 (v1)
-- From  : 
-------------------- -->
 <footer>
 	<h2>Contact Us</h2>
 	<p class = "footertext">Telephone: 123-456-7890.</p>
