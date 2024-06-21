@@ -57,6 +57,7 @@ p {
 	font-size: 14px;
 	margin: 10px 10px 20px;
 	text-align: justify;
+	line-height: 1.5;
 }
 
 /*Setting generic format for all hyperlinks in the website: remove underline*/
