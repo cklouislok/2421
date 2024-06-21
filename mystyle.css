@@ -122,8 +122,7 @@ img {
 a#nav-logo {
 	font-family: cursive;
 	font-size: 50px;
-	color: rgb(42, 30, 6);
-	background-color: #008B8B;
+	color: #017c05;
 }
 
 /*To remove the default list style and set the format for the menu, i.e. Home and About me*/
@@ -144,17 +143,17 @@ ul.menu-list {
 .menu-item a {
 	display: block;
 	font-size: 18px;
-	color: #00008B;
+	color: #ffffff;
 	padding: 20px;
 	font-weight: bold;
 	border-radius: 45px;
-	background-color: #008B8B;
+	background-color: #5e7114bc;
 }
 
 /*Setting display style when hovering mouse on NavBar items*/
 /*Color picked from Google's RGB Color Picker*/
 .menu-item :hover {
-	background-color: #5f7114;
+	background-color: #008b8b85;
 	color: #000000;
 	font-style: italic;
 	text-decoration: underline;
@@ -162,6 +161,7 @@ ul.menu-list {
 
 /*Setting display style for the active link i.e. current webpage location at the NavBar menu*/
 .menu-item a.active {
+	color: #000000;
 	background-color: rgb(205, 213, 91);
 	font-weight: bold;
 }
